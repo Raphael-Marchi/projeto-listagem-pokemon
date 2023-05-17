@@ -1,0 +1,184 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    /*Aqui ecolho a fonte padrão, e opcional caso algum problema*/
+    max-width: 1280px;
+    /*Aqui defino a largura máxima do site*/
+    margin: 0 auto;
+    /*margin mantem o conteúdo centralizado*/
+    background-color: #5e5b5bad;
+    /*Fundo da Pagina*/
+    color: #333333;
+    /*Cor do texto*/
+}
+
+body.modo-escuro {
+    /*criando o modo escuro*/
+    background-color: #212121;
+    /*cor de fundo do modo escuro*/
+    color: #f5f5f5;
+    /*cor da letra do modo escuro*/
+}
+
+header {
+    /*Aqui eu trabalho com o cabeçalho*/
+    display: flex;
+    /* Aqui eu deixo a pokebola e o sol em uma linha */
+    justify-content: space-between;
+    /* Aqui eu alinho a pokebola e o sol */
+    padding: 25px;
+    /* Aqui eu faço o espaçamento das bordas */
+}
+
+header .logo,
+/* Aqui eu estilizo a classe logo que é a pokebola e o sol*/
+header .imagem-botao {
+    /* Aqui eu estilizo a classe imagem botão */
+    width: 30px;
+    /* Aqui defino a largura */
+    transition: 0.2s ease-in-out;
+    /* aqui defino o tempo de transiçao*/
+}
+
+/* Aqui eu trabalho apenas com o sol*/
+
+header #botao-alterar-tema {
+    /* para estilizar id uso (hastag) para estilizar classe uso(ponto)*/
+    background: none;
+    /*Aqui trabalho com o fundo da imagem*/
+    border: none;
+    /* Aqui trabalho com as bordas */
+}
+
+/* Rover é o pulinho da imagem */
+
+header .logo:hover,
+/* Aqui vou trabalhar com a classe logo, que é a pokebola*/
+header .imagem-botao:hover,
+/* Aqui vou trabalhar coma  classe imagem-botao, que é o sol*/
+main .cartao-pokemon:hover {
+    /* Aqui vou trabalhar com a classe cartão-pokemon que é os cards*/
+    transform: scale(1.20);
+    /* Aqui defino o aumento a imagem ao passar o mouse */
+    cursor: pointer;
+    /* Aqui transformo as coisas em um botão, e o mouse vira uma mãozinha*/
+}
+
+main {
+    /* Aqui trabalho com fundo atras dos cards */
+    padding: 25px;
+    /* Aqui trabalho com o espaçamento das bordas dos cards*/
+}
+
+main .listagem-pokemon {
+    /* Aqui trabalho com as Ul's */
+    display: flex;
+    /* Aqui coloco tudo da lista um ao lado do outro, ao invés de um abaixo do outro */
+    flex-wrap: wrap;
+    /* Aqui faço com que os cards se encaixem dentro da largura da listagem, ante preciso definir o width dos cards */
+    gap: 30px;
+    /* Aqui eu defino o espaçamento de cada card */
+    justify-content: center;
+    /* Aqui eu centralizo o conteudo independente do tamanho da tela */
+}
+
+main .cartao-pokemon {
+    /* Aqui trabalho com os cards */
+    background-color: #d8e3ec;
+    /* Aqui trabalho com a cor dos cards */
+    width: 200px;
+    /* Aqui defino a largura de cada card */
+    padding: 15px;
+    /* Aqui trabalho com o espaçamento das bordas dos cards*/
+    display: flex;
+    /* aqui trabalho com o alinhamento do texto em geral no centro */
+    flex-direction: column;
+    /* aqui quebro os textos dentro dos cards*/
+    align-items: center;
+    /* Aqui mantenho as letras alinhados no centro dos cards*/
+    gap: 15px;
+    /* aqui eu separo um pouco os textos dentro do card */
+    border-radius: 15px;
+    /* aqui coloco uma borda arredondada no cartão */
+    transition: 0.2s ease-in-out;
+    /* aqui coloco um efeito do hover nos cards (transição)*/
+}
+
+main .cartao-pokemon:hover {
+    /* crio o efeito pulinho dos cards*/
+    background-color: #96d9d6;
+    /* Cor do Cards ao passar o mouse*/
+}
+
+.modo-escuro .cartao-pokemon {
+    background-color: #a8a8a8;
+    /* Cor dos cards ao passar o mouse no modo escuro*/
+}
+
+main .cartao-pokemon .informacoes {
+    /* Aqui trabalho com o titulo do card */
+    display: flex;
+    /* Aqui alinho o texto em uma linha*/
+    justify-content: space-between;
+    /* aqui defino o espaçamento */
+    border: 1px solid #333333;
+    /* Aqui eu defino a borda do nome do card */
+    border-radius: 10px;
+    /* Aqui eu defino a borda arredondada */
+}
+
+main .cartao-pokemon .informacoes span {
+    padding: 5px;
+    /* Aqui trabalho com o espaçamento das bordas dos cards*/
+    text-transform: uppercase;
+    /* transforma o texto do titulo do card todos em letra maiuscula */
+    font-size: 17px;
+    /* define o tamanho da fonte do titulo do card */
+}
+
+main .cartao-pokemon .gif {
+    width: 90px;
+    /* largura do gif */
+    height: 90px;
+    /* Altura do gif */
+}
+
+main .cartao-pokemon .tipos {
+    /* Aqui trabalho com a classe tipo do card */
+    display: flex;
+    /* Aqui coloco tudo da lista um ao lado do outro, ao invés de um abaixo do outro */
+    gap: 15px;
+    /* Aqui eu defino o espaçamento das classes do card */
+}
+
+main .cartao-pokemon .Tipo {
+    /* Aqui trabalho com a Classe tipos dos cards*/
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.Grama {
+    background-color: #7ac74c;
+}
+
+.Veneno {
+    background-color: #df67ddfb;
+}
+
+.Fogo {
+    background-color: #ee8130;
+}
+
+.Agua {
+    background-color: #6393f0;
+}
+
+.Inseto {
+    background-color: #a6b91a;
+}
+
+main .descricao {
+    max-height: 80px;
+    overflow-y: scroll;
+    font-size: 14px;
+    padding-right: 10px;
+}
